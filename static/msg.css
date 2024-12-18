@@ -1,0 +1,60 @@
+/* Notification Styles */
+.notification {
+    position: relative;
+    top: 20px; /* Ensures it's always visible at the top */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -200%); /* Initial off-screen position */
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #ff7b7b, #ff4d4d);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+}
+
+.notification.visible {
+    opacity: 1;
+    transform: translate(-50%, 0); /* Slide to visible position */
+}
+
+.notification.hidden {
+    opacity: 0;
+    transform: translate(-50%, -200%);
+}
+
+.notification-icon {
+    font-size: 1.2rem;
+}
+
+/* Specific Notification Types */
+.notification.success {
+    background: linear-gradient(135deg, #7cff7c, #4caf50);
+}
+
+.notification.error {
+    background: linear-gradient(135deg, #ff7b7b, #ff4d4d);
+}
+
+.notification.warning {
+    background: linear-gradient(135deg, #ffc94c, #ffa726);
+}
+
+.notification.info {
+    background: linear-gradient(135deg, #7bbcff, #1e88e5);
+}
+.notification.hidden {
+    opacity: 0;
+    transform: translate(-50%, -200%);
+}
+
+.notification.visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}

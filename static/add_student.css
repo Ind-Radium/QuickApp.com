@@ -1,0 +1,218 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    background-color: #1a73e8;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid #0f5ab8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Section */
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form Section */
+.admission-form-section {
+    background: #ffffff;
+    padding: 40px 30px;
+    margin: 30px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admission-form-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.admission-form-section h2 {
+    font-size: 2rem;
+    color: #1a73e8;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background: #fafafa;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 8px rgba(26, 115, 232, 0.4);
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* Subject List */
+.subject-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.subject-list label {
+    flex: 1 1 calc(48% - 10px);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subject-list label:hover {
+    background-color: #f0f8ff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.subject-list input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Fee Display */
+#fee-display {
+    font-size: 1.5rem;
+    color: #1a73e8;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Hide the "Choose File" button */
+input[type="file"]::-webkit-file-upload-button {
+    display: none; /* Hides the default upload button */
+}
+
+input[type="file"]::file-selector-button {
+    display: none; /* Hides the button in modern browsers */
+}
+
+/* Style the file input field to look clean */
+input[type="file"] {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    color: #555;
+    background: #f9f9f9;
+    width: 100%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="file"]:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 8px rgba(26, 115, 232, 0.4);
+    outline: none;
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(135deg, #1a73e8, #0c47a1);
+    color: white;
+    padding: 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0f5ab8;
+    transform: translateY(-3px);
+}
+
+button:active {
+    background-color: #092f77;
+    transform: translateY(0);
+}
+
+/* Error Messages */
+.error-message {
+    color: red;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Footer Styles */
+.footer {
+    background: #1a73e8;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    font-size: 0.9rem;
+    text-align: center;
+}

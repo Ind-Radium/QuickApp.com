@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTS ACADEMY APP</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="icon" href="static/favicon.ico" type="image/ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,800;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* CSS for changing colors of text */
+        .color-text {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <img src="static/favicon.ico" alt="ARTS ACADEMY Logo" class="logo">
+        <h1>Welcome To <br></h1>
+        <div id="typed-output">
+            <h1><span id="typed-text"></span></h1>
+        </div>    
+        <p>Your gateway to creative learning.</p>
+    </header>
+
+    <!-- Main Section -->
+    <main class="main-content">
+        <div class="cta-grid">
+            <a href="static/add_student.html" class="button primary">Add Student</a>
+            <a href="static/edit_student.html" class="button secondary">Edit Student</a>
+            <a href="static/view_student.html" class="button primary">View Student</a>
+            <a href="static/all_student.html" class="button secondary">All Students</a>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var options = {
+            strings: [
+                "ARTS ACADEMY APP"
+            ],
+            typeSpeed: 70,
+            backSpeed: 80,
+            backDelay: 1000,
+            startDelay: 500,
+            loop: true,
+            contentType: 'text', // Ensure we are typing plain text, no HTML
+            onStringTyped: function() {
+                // After typing, add the color animation class
+                var typedTextElement = document.getElementById("typed-text");
+                typedTextElement.classList.add("color-text");
+            }
+        };
+
+        var typed = new Typed("#typed-text", options);
+    </script>
+</body>
+</html>
