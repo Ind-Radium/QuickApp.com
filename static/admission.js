@@ -88,5 +88,6 @@ document.getElementById('admission-form').addEventListener('submit', function(ev
     .catch((error) => {
         console.error('Error:', error);
         document.getElementById('global-error').innerText = 'There was an error submitting the form. Please try again.';
+        showNotification("Error while adding student.","error");
     });
 });

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student</title>
+    <link rel="stylesheet" href="edit_student.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+    <link rel="stylesheet" href="msg.css">
+    <link rel="icon" href="favicon.ico" type="image/ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>Edit Student Details</h1>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section class="edit-form-section">
+            <h2>Modify the Student Information</h2>
+
+            <div id="global-error" class="error-message"></div>
+
+            <form id="edit-form">
+                <!-- Student ID -->
+                <div class="form-group">
+                    <label for="student-id">Student ID:</label>
+                    <input type="text" id="student-id" name="student-id" placeholder="Enter Student ID" required>
+                </div>
+
+                <!-- Search Button -->
+                <div class="form-group">
+                    <button type="button" id="search-button">Search</button>
+                </div>
+
+                <!-- All fields below will be disabled until student is found -->
+                <fieldset id="details-fields" >
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="name">Student's Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter Name" required>
+                    </div>
+
+                    <!-- Guardian's Name -->
+                    <div class="form-group">
+                        <label for="guardian-name">Guardian's Name:</label>
+                        <input type="text" id="guardian-name" name="guardian-name" placeholder="Enter Guardian's Name" required>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label for="guardian-phone">Guardian's Phone Number:</label>
+                        <input type="tel" id="guardian-phone" name="guardian-phone" placeholder="Enter Phone Number" required>
+                    </div>
+
+                    <!-- Student Phone -->
+                    <div class="form-group">
+                        <label for="student-phone">Student's Phone Number:</label>
+                        <input type="tel" id="student-phone" name="student-phone" placeholder="Enter Student's Phone Number (Optional)">
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <textarea id="address" name="address" placeholder="Enter Address" rows="3" required></textarea>
+                    </div>
+
+                    <!-- Class Dropdown -->
+                    <div class="form-group">
+                        <label for="class">Class:</label>
+                        <select id="class" name="class" required>
+                            <option value="" disabled>Select Class</option>
+                            <option value="6">Class 6</option>
+                            <option value="7">Class 7</option>
+                            <option value="8">Class 8</option>
+                            <option value="9">Class 9</option>
+                            <option value="10">Class 10</option>
+                            <option value="11">Class 11</option>
+                            <option value="12">Class 12</option>
+                            <option value="ba_pass">B.A (Pass)</option>
+                            <option value="ba_honours">B.A (Honours)</option>
+                            <option value="computer_any">Only Computer (For anyone)</option>
+                        </select>
+                    </div>
+
+                    <!-- School -->
+                    <div class="form-group">
+                        <label for="school">Student's School:</label>
+                        <input type="text" id="school" name="school" placeholder="Enter School" required>
+                    </div>
+
+                    <!-- Version Dropdown -->
+                    <div class="form-group">
+                        <label for="version">Version:</label>
+                        <select id="version" name="version" required>
+                            <option value="" disabled>Select Version</option>
+                            <option value="beng">Bengali Version</option>
+                            <option value="eng">English Version</option>
+                            <option value="none">Don't Know?</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <div id="notification" class="notification hidden"></div>
+
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button id="btn" type="submit" disabled>Update Details</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Arts Academy | All Rights Reserved</p>
+    </footer>
+
+    <script src="edit_student.js"></script>
+</body>
+
+</html>
